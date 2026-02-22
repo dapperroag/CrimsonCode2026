@@ -4,6 +4,10 @@ body {
   text-align: center;
 }
 
+body {
+  background-color: #22262a;
+}
+
 .button-row button, .actions button {
   font-size: 20px;
   padding: 10px 20px;
@@ -20,8 +24,8 @@ body {
 }
 
 .actions button:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: #22262a;
+  color: rgb(33, 27, 34);
   transform: scale(1.05);
 }
 
