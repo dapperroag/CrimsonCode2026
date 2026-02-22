@@ -27,9 +27,9 @@ As of February 22nd, 2026:
 
 How to test:
 1. Run the following terminal commands
-    python -m venv venv
-    venv\Scripts\activate
-    pip install -r requirements.txt
-    uvicorn app.main:app --reload
+    * python -m venv venv
+    * venv\Scripts\activate
+    * pip install -r requirements.txt
+    * uvicorn app.main:app --reload
 
 2. Run the html file inside of frontend
