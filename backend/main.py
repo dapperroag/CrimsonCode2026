@@ -25,18 +25,15 @@ class StringRequest(BaseModel):
 async def process_string(data: StringRequest):
     print("Received string:", data.string)  # logs in terminal
 
-    # call your teammate's function
-    algebra_solver = solvers.algebra_solver
-    result = algebra_solver.solve(data.string)
+    # solving for the result
+    solver = solvers.general_solver
+    result = solver.solve(data.string)
+
+    # convert result to a string with no parentheses or brackets
+    output_string = str(result).replace(")","").replace("(","").replace("[","").replace("]","")
 
     # Wrap result in JSON
-    return {"result": str(result)}  
+    return {"result": output_string}
 
-#user_input = input()
-
-#algebra_solver = solvers.algebra_solver
-#calculus_solver = solvers.calculus_solver
-
-#result = algebra_solver.solve(user_input)
 
 
