@@ -8,6 +8,10 @@ body {
   background-color: #22262a;
 }
 
+body {
+  color: white; 
+}
+
 .button-row button, .actions button {
   font-size: 20px;
   padding: 10px 20px;
@@ -19,12 +23,12 @@ body {
 }
 
 .button-row button:hover {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   transform: scale(1.1);
 }
 
 .actions button:hover {
-  background-color: #22262a;
+  background-color: #aaaaaa;
   color: rgb(33, 27, 34);
   transform: scale(1.05);
 }
