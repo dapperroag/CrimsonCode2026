@@ -1,0 +1,5 @@
+numpy
+sympy
+google-genai
+fastapi
+uvicorn
