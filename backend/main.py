@@ -21,15 +21,16 @@ app.add_middleware(
 class StringRequest(BaseModel):
     string: str
 
-@app.post("/process_string") #gets the string
+@app.post("/process_string")
 async def process_string(data: StringRequest):
     print("Received string:", data.string)  # logs in terminal
 
-    # call your teammate's function here
+    # call your teammate's function
     algebra_solver = solvers.algebra_solver
     result = algebra_solver.solve(data.string)
 
-    return {"result": result}
+    # Wrap result in JSON
+    return {"result": str(result)}  
 
 #user_input = input()
 
