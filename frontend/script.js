@@ -1,6 +1,22 @@
 // global variable to store the string
 let myString = "";
+const colors = ['#4CAF50', '#FF5722', '#2196F3', '#FFC107', '#9C27B0']; 
+function cycleColor(btn) {
+  // store current color index in a data attribute
+  let currentIndex = btn.dataset.colorIndex ? parseInt(btn.dataset.colorIndex) : -1;
 
+  // move to next color
+  currentIndex = (currentIndex + 1) % colors.length;
+
+  // apply the new color
+  btn.style.backgroundColor = colors[currentIndex];
+
+  // optional: change text color if needed
+  btn.style.color = 'white';
+
+  // save the index back to the button
+  btn.dataset.colorIndex = currentIndex;
+}
 // Add a symbol to the string
 function addSymbol(symbol) {
   myString += symbol;
@@ -23,7 +39,7 @@ async function submitString() {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({ string: myString })
-    });
+    })
 
     // Parse JSON response from backend
     const data = await response.json();

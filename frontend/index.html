@@ -5,77 +5,86 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-<div class="container">
-  <h1>Symbol Adder</h1>
-  <div class="button-row">
-    <button onclick="addSymbol('.')">.</button>
-    <button onclick="addSymbol('+')">+</button>
-    <button onclick="addSymbol('-')">-</button>
-    <button onclick="addSymbol('*')">*</button>
-    <button onclick="addSymbol('/')">\</button>
-    <button onclick="addSymbol('=')">=</button>
-    <button onclick="addSymbol('^')">^</button>
-    <button onclick="addSymbol('(')">(</button>
-    <button onclick="addSymbol(')')">)</button>
-    <button onclick="addSymbol('&lt;')">&lt;</button>
-    <button onclick="addSymbol('&gt;')">&gt;</button>
-    <button onclick="addSymbol('1')">1</button>
-    <button onclick="addSymbol('2')">2</button>
-    <button onclick="addSymbol('3')">3</button>
-    <button onclick="addSymbol('4')">4</button>
-    <button onclick="addSymbol('5')">5</button>
-    <button onclick="addSymbol('6')">6</button>
-    <button onclick="addSymbol('7')">7</button>
-    <button onclick="addSymbol('8')">8</button>
-    <button onclick="addSymbol('9')">9</button>
-    <button onclick="addSymbol('0')">0</button>
-    <button onclick="myString = myString.slice(0, -1); document.getElementById('result').innerText = myString;">⌫</button>
-    
-    <button onclick="addSymbol('x')">x</button>
-    <button onclick="addSymbol('abs')">| |</button>
-    <button onclick="addSymbol('sqrt')">√</button>
-		<button onclick="addSymbol('')">ⁿ√</button>
-    <button onclick="addSymbol('²')">a²</button>
-    <button onclick="addSymbol('^')">aˣ</button>
-		<button onclick="addSymbol('sin')">sin</button>
-		<button onclick="addSymbol('cos')">cos</button>
-		<button onclick="addSymbol('tan')">tan</button>
-		<button onclick="addSymbol('csc')">csc</button>
-		<button onclick="addSymbol('sec')">sec</button>
-		<button onclick="addSymbol('cot')">cot</button>
-		<button onclick="addSymbol('')">sin⁻¹</button>
-		<button onclick="addSymbol('')">cos⁻¹</button>
-		<button onclick="addSymbol('')">tan⁻¹</button>
-		<button onclick="addSymbol('')">csc⁻¹</button>
-		<button onclick="addSymbol('')">sec⁻¹</button>
-		<button onclick="addSymbol('')">cot⁻¹</button>
-
-<button onclick="addSymbol('')">e</button>
-<button onclick="addSymbol('')">log</button>
-<button onclick="addSymbol('')">ln</button>
-<button onclick="addSymbol('')">logₓ</button>
-<button onclick="addSymbol('')">d⁄dx</button>
-<button onclick="addSymbol('')">∑</button>
-<button onclick="addSymbol('')">f′</button>
-<button onclick="addSymbol('')">∫</button>
-
-<button onclick="addSymbol('')">mod</button>
-<button onclick="addSymbol('')">lcm</button>
-<button onclick="addSymbol('')">gcd</button>
-<button onclick="addSymbol('')">ceil</button>
-<button onclick="addSymbol('')">floor</button>
-<button onclick="addSymbol('')">round</button>
-  </div>
 
   <div class="string-display">
-    <h2>Current String:</h2>
+    <h2>Re-in-Calc-nated:</h2>
     <p id="result"></p>
   </div>
 
+<div class="container">
+  <div class="button-row">
+    <div class="button-std">
+      <button onclick="addSymbol('1')">1</button>
+      <button onclick="addSymbol('2')">2</button>
+      <button onclick="addSymbol('3')">3</button>
+      <button onclick="addSymbol('+')">+</button>
+      <button onclick="addSymbol('-')">-</button>
+      <button onclick="myString = myString.slice(0, -1); document.getElementById('result').innerText = myString;">⌫</button>
+      <button onclick="addSymbol('4')">4</button>
+      <button onclick="addSymbol('5')">5</button>
+      <button onclick="addSymbol('6')">6</button>
+      <button onclick="addSymbol('*')">*</button>
+      <button onclick="addSymbol('/')">\</button>
+      <button onclick="addSymbol('.')">.</button>
+      <button onclick="addSymbol('7')">7</button>
+      <button onclick="addSymbol('8')">8</button>
+      <button onclick="addSymbol('9')">9</button>
+      <button onclick="addSymbol('(')">(</button>
+      <button onclick="addSymbol(')')">)</button>
+      <button onclick="addSymbol('=')">=</button>
+      <button onclick="addSymbol('0')">0</button>
+      <button onclick="addSymbol('&lt;')">&lt;</button>
+      <button onclick="addSymbol('&gt;')">&gt;</button>
+      <button onclick="addSymbol('^')">^</button>
+    </div>
+    <div class="button-spec">
+      <button onclick="addSymbol('x')">x</button>
+      <button onclick="addSymbol('abs')">| |</button>
+      <button onclick="addSymbol('sqrt')">√</button>
+		  <button onclick="addSymbol('')">ⁿ√</button>
+      <button onclick="addSymbol('^2')">a²</button>
+      <button onclick="addSymbol('')">aˣ</button>
+    </div>
+    <div class="button-trig">
+		  <button onclick="addSymbol('sin')">sin</button>
+		  <button onclick="addSymbol('cos')">cos</button>
+		  <button onclick="addSymbol('tan')">tan</button>
+		  <button onclick="addSymbol('csc')">csc</button>
+		  <button onclick="addSymbol('sec')">sec</button>
+		  <button onclick="addSymbol('cot')">cot</button>
+		  <button onclick="addSymbol('')">sin⁻¹</button>
+		  <button onclick="addSymbol('')">cos⁻¹</button>
+		  <button onclick="addSymbol('')">tan⁻¹</button>
+		  <button onclick="addSymbol('')">csc⁻¹</button>
+		  <button onclick="addSymbol('')">sec⁻¹</button>
+		  <button onclick="addSymbol('')">cot⁻¹</button>
+    </div>
+    <div class="button-log">
+      <button onclick="addSymbol('')">e</button>
+      <button onclick="addSymbol('')">log</button>
+      <button onclick="addSymbol('ln')">ln</button>
+      <button onclick="addSymbol('')">logₓ</button>
+    </div>
+    <div class="button-calc">
+      <button onclick="addSymbol('')">d⁄dx</button>
+      <button onclick="addSymbol('')">∑</button>
+      <button onclick="addSymbol('')">f′</button>
+      <button onclick="addSymbol('')">∫</button>
+    </div>
+    <div class="button-eng">
+      <button onclick="addSymbol('')">mod</button>
+      <button onclick="addSymbol('')">lcm</button>
+      <button onclick="addSymbol('')">gcd</button>
+      <button onclick="addSymbol('')">ceil</button>
+      <button onclick="addSymbol('')">floor</button>
+      <button onclick="addSymbol('')">round</button>
+    </div>
+  </div>
+</div>
+
   <div class="actions">
+    <button onclick="submitString()">Calculate</button>
     <button onclick="resetString()">Reset</button>
-    <button onclick="submitString()">Submit to Backend</button>
   </div>
 </div>
 
@@ -84,6 +93,15 @@
 
 <script src="script.js"></script>
 </body>
+
+<body>
+  <div class="tab">
+  <button onclick="cycleColor(this)"></button>
+  <button onclick="cycleColor(this)"></button>
+  <button onclick="cycleColor(this)"></button>
+  </div>
+</body>
+
 </html>
 
 

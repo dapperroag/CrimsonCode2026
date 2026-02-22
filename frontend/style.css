@@ -2,15 +2,41 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
   text-align: center;
-}
-
-body {
   background-color: #22262a;
+  color: white;
 }
 
-body {
-  color: white; 
+.tab {
+  display: grid;
+  grid-template-columns: repeat(1, 80px); 
+  grid-gap: 2px;  
+  justify-content: left; 
+  position: fixed;       /* stays on screen, floats above content */
+  top: 90px;          /* distance from bottom of viewport */
+  left: -60px;           /* distance from right */
+  padding: 2px;
+  border-radius: 4px;
+  gap: 2px;             /* space between buttons */
+  z-index: 9999;         /* make sure it's on top of everything */
+  outline: none;
 }
+
+.tab button, .tab button {
+  font-size: 20px;
+  padding: 50px 10px;
+  margin: 2px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.button-trig { order: 1; }
+.button-std { order: 2; }
+.button-spec { order: 3; }
+.button-calc { order: 4; }
+.button-eng { order: 5; }
+.button-log { order: 6; }
 
 .button-row button, .actions button {
   font-size: 20px;
@@ -20,6 +46,10 @@ body {
   border: none;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
+}
+
+button-spec, .actions button {
+  margin: 80px;
 }
 
 .button-row button:hover {
@@ -37,3 +67,97 @@ body {
   margin-top: 20px;
   font-size: 24px;
 }
+
+.button-row {
+  display: grid;
+  grid-template-columns: repeat(3, max-content); 
+  grid-auto-rows: max-content;                   
+  gap: 20px;                                    
+  justify-content: center;   
+  align-items: start;   
+}
+
+.button-trig {
+  display: grid;
+  grid-template-columns: repeat(4, 80px); 
+  grid-gap: 10px;  
+  justify-content: center; 
+  margin: 20px 0;
+}
+
+.button-trig button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-std {
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+  grid-gap: 10px;  
+  justify-content: center; 
+  margin: 20px 0;
+}
+
+.button-std button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-spec {
+  display: grid;
+  grid-template-columns: repeat(3, 106px); 
+  grid-gap: 10px;  
+  justify-content: center; 
+  margin: 20px 0;
+}
+
+.button-spec button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-calc {
+  display: grid;
+  grid-template-columns: repeat(2, 70px);
+  grid-gap: 10px;  
+  justify-content: center; 
+  margin: 20px 0;
+}
+
+.button-calc button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-eng {
+  display: grid;
+  grid-template-columns: repeat(6, 80px); 
+  grid-gap: 10px;  
+  justify-content: center; 
+  margin: 20px 0;
+}
+
+.button-eng button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-log {
+  display: grid;
+  grid-template-columns: repeat(2, 70px); 
+  grid-gap: 10px;  
+  justify-content: center; 
+  margin: 20px 0;
+}
+
+.button-log button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
