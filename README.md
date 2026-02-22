@@ -16,14 +16,14 @@ the explanation of the steps with the Python solutions being plugged into
 the framework.
 
 As of February 22nd, 2026:
--The calculator has not implemented the LLM function
--Simply doing algebraic expressions and equations. (one variable = x)
--There are functions/buttons on the frontend that are present but not
- implemented. There is no direct way of knowing which ones work except
- by clicking them, which will input nothing if done so.
--Tabs backend is not connected with frontend. Functionality of
- backend should be close to done.
--UI is still a major WIP. 
+- The calculator has not implemented the LLM function
+- Simply doing algebraic expressions and equations. (one variable = x)
+- There are functions/buttons on the frontend that are present but not
+  implemented. There is no direct way of knowing which ones work except
+  by clicking them, which will input nothing if done so.
+- Tabs backend is not connected with frontend. Functionality of
+  backend should be close to done.
+- UI is still a major WIP. 
 
 How to test:
 1. Run the following terminal commands
