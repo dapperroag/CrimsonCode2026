@@ -2,7 +2,7 @@ import numpy as np
 import sympy as sp
 from google import genai
 
-import solvers
+from backend import solvers
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware

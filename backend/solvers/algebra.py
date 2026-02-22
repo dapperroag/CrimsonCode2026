@@ -1,6 +1,7 @@
 import sympy as sp
 from .base import BaseSolver
 
+#Returns: sympify object
 class AlgebraSolver(BaseSolver):
     def solve(self, user_input: str):
         clean_input = self.cleanse_input(user_input)
@@ -18,8 +19,10 @@ class AlgebraSolver(BaseSolver):
         vars = self.get_variables(equation)
 
         if not vars:
-            print(equation)
-            return equation
+            solution = equation.evalf()
+            print(solution)
+            return solution
         else:
-            print(sp.solve(equation, vars))
-            return sp.solve(equation, vars)
+            solution = sp.solve(equation, vars)
+            print(solution)
+            return solution
