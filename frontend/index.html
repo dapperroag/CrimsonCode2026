@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Symbol Adder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Symbol Adder</h1>
+
+  <div class="button-row">
+    <button onclick="addSymbol('★')">Add Star</button>
+    <button onclick="addSymbol('☀')">Add Sun</button>
+    <button onclick="addSymbol('☂')">Add Umbrella</button>
+  </div>
+
+  <div class="string-display">
+    <h2>Current String:</h2>
+    <p id="result"></p>
+  </div>
+
+  <div class="actions">
+    <button onclick="resetString()">Reset</button>
+    <button onclick="submitString()">Submit to Backend</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
