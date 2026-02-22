@@ -2,13 +2,21 @@ import numpy as np
 import sympy as sp
 from google import genai
 
+#Use these for FastAPI
 from backend import solvers
+from backend.ui import tabs
+
+#Use these for terminal
+#import solvers
+#from ui import tabs
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 app = FastAPI()
+
+tab_manager = tabs.TabManager()
 
 # Allow browser frontend to connect
 app.add_middleware(
@@ -30,7 +38,7 @@ async def process_string(data: StringRequest):
     result = solver.solve(data.string)
 
     # convert result to a string with no parentheses or brackets
-    output_string = str(result).replace(")","").replace("(","").replace("[","").replace("]","")
+    output_string = str(result)
 
     # Wrap result in JSON
     return {"result": output_string}
