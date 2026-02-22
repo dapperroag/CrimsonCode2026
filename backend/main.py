@@ -7,7 +7,8 @@ import solvers
 user_input = input()
 
 algebra_solver = solvers.algebra_solver
+calculus_solver = solvers.calculus_solver
 
-result = algebra_solver.solve(user_input)
+result = calculus_solver.integrate(user_input)
 
 
